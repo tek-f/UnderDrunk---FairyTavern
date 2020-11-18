@@ -44,16 +44,16 @@ public class VrControllerInput : MonoBehaviour
         controller = _controller;
 
         grab.AddOnStateDownListener(OnGrabDown, controller.InputSource);
-        grab.AddOnStateDownListener(OnGrabDown, controller.InputSource);
+        grab.AddOnStateUpListener(OnGrabUp, controller.InputSource);
 
         pointer.AddOnStateDownListener(OnPointerDown, controller.InputSource);
-        pointer.AddOnStateDownListener(OnPointerUp, controller.InputSource);
+        pointer.AddOnStateUpListener(OnPointerUp, controller.InputSource);
         
         use.AddOnStateDownListener(OnUseDown, controller.InputSource);
-        use.AddOnStateDownListener(OnUseUp, controller.InputSource);
+        use.AddOnStateUpListener(OnUseUp, controller.InputSource);
         
         teleport.AddOnStateDownListener(OnTeleportDown, controller.InputSource);
-        teleport.AddOnStateDownListener(OnTeleportUp, controller.InputSource);
+        teleport.AddOnStateUpListener(OnTeleportUp, controller.InputSource);
         
         touchpadAxis.AddOnAxisListener(OnTouchpadAxis, controller.InputSource);
     }

@@ -69,8 +69,8 @@ public class Pointer : MonoBehaviour
         cursor.SetActive(false);
         tracer.SetActive(false);
 
-        cursorRend = gameObject.GetComponent<MeshRenderer>();
-        tracerRend = gameObject.GetComponent<MeshRenderer>();
+        cursorRend = cursor.GetComponent<MeshRenderer>();
+        tracerRend = tracer.GetComponent<MeshRenderer>();
     }
 
     void Update()

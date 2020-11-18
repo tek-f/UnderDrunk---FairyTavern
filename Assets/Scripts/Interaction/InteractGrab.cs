@@ -79,8 +79,8 @@ public class InteractGrab : MonoBehaviour
         FixedJoint joint = AddJoint();
         joint.connectedBody = heldObject.Rigidbody;
 
-            grabbed.Invoke(new InteractionEventArgs(input.Controller, heldObject.Rigidbody, heldObject.Collider));
-            heldObject.OnObjectGrabbed(input.Controller);
+        grabbed.Invoke(new InteractionEventArgs(input.Controller, heldObject.Rigidbody, heldObject.Collider));
+        heldObject.OnObjectGrabbed(input.Controller);
     }
 
     private void UngrabObject()
